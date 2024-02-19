@@ -17,7 +17,6 @@ a {
 }
 
 #navbar {
-  height: 50px;
   background-color: darkcyan;
 }
 #navbar > ul {
@@ -31,7 +30,6 @@ a {
 
 #content {
   background-color: blanchedalmond;
-  margin-top: 50px;
 }
 
 #footer {
