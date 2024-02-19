@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/css/style.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.css' />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/scss/helpers/_icon-link.scss">
+  <title>Document</title>
+</head>
+
+<body>
+  <section id="navbar">
+    <nav class="navbar navbar-expand-md navbar-dark bg-success-subtle fixed-top">
+      <!-- .container-fluid 滿版、.container 固定寬度 -->
+      <div class="container-fluid">
+        <!-- 品牌LOGO -->
+        <a class="navbar-brand" href="#"><img src="/image/icon/icon.jpg" alt="" height="20px"> 格調</a>
+        <!-- 漢堡按鈕 -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#burger">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- 選單 -->
+        <div class="collapse navbar-collapse" id="burger">
+          <!-- me推兩側ms推右 -->
+          <ul class="list-side li navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="/result/aboutus.html">關於我們</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/result/Product.html">風格展示</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/result/Designer.html">設計師</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/result/CallUs.html">聯絡我們</a>
+            </li>
+
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <section id="content">
+  </section>
+
+  <section id="footer">
+    <h1>END</h1>
+  </section>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js'></script>
+  <script>
+    $(document).ready(function () {
+      $.get("result/main.html", function (data) {
+        $("#content").html(data);
+      });
+      $(function () {
+        $('.list-side li').click(function () {
+          let link = $(this),
+            alink = link.find('a').attr('href');
+          if ("-1" == alink.search("http://")) {
+            $.get(alink, function (data) {
+              $("#content").html(data);
+            });
+            return false
+          }
+        })
+      })
+    });
+  </script>
+</body>
+
+</html>

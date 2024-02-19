@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+}
+
+ul {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none !important;
+  color: black !important;
+}
+
+#navbar {
+  background-color: darkcyan;
+}
+#navbar > ul {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#content {
+  background-color: blanchedalmond;
+  margin-top: 52px;
+}
+
+#footer {
+  background-color: gray;
+}
+#footer h1 {
+  text-align: center;
+}

@@ -1,0 +1,10 @@
+#navbar {
+  //靠右
+  .navbar-collapse {
+    // flex-grow: inherit;
+  }
+  background-color: darkcyan;
+  > ul {
+    justify-content: center;
+  }
+}
