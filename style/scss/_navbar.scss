@@ -1,8 +1,19 @@
 #navbar {
+  .navbar {
+    background-color: rgb(76, 63, 113);
+    transition: background-color 0.3s;
+  }
+  a {
+    color: white !important;
+  }
+
   .nav-background {
     background-color: rgb(242, 208, 154);
   }
   // height: 50px;
+  .navbar {
+    // position: fixed;
+  }
   .navbar-nav {
     --bs-nav-link-padding-y: 0rem;
     > li {
@@ -29,5 +40,10 @@
   nav {
     // background-color: rgb(242, 208, 154);
     // height: 50px;
+  }
+  @include sm {
+    .navbar {
+      background-color: unset;
+    }
   }
 }

@@ -17,6 +17,14 @@ a {
   color: black !important;
 }
 
+#navbar .navbar {
+  background-color: rgb(76, 63, 113);
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+#navbar a {
+  color: white !important;
+}
 #navbar .nav-background {
   background-color: rgb(242, 208, 154);
 }
@@ -40,6 +48,21 @@ a {
           align-items: center;
   line-height: 50;
 }
+@media (min-width: 576px) {
+  #navbar .navbar {
+    background-color: unset;
+  }
+}
+
+#content {
+  padding-top: 50px;
+}
+@media (min-width: 576px) {
+  #content {
+    padding-top: 0;
+  }
+}
+
 #footer {
   background-color: gray;
 }
