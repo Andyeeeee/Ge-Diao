@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-color: rgb(22, 42, 77);
 }
 
 ul {
@@ -16,25 +17,36 @@ a {
   color: black !important;
 }
 
-#navbar {
-  background-color: darkcyan;
+#navbar .nav-background {
+  background-color: rgb(242, 208, 154);
+}
+#navbar .navbar-nav {
+  --bs-nav-link-padding-y: 0rem;
+}
+#navbar .navbar-nav > li {
+  line-height: 50px !important;
+}
+#navbar .container-fluid {
+  padding: 0;
 }
 #navbar > ul {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  height: 50px !important;
 }
-#navbar li {
-  padding: 0 20px;
+#navbar > li {
+  padding: 0;
+  height: 50px !important;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 50;
 }
-
-#content {
-  background-color: blanchedalmond;
-}
-
 #footer {
   background-color: gray;
 }
 #footer h1 {
   text-align: center;
+}
+
+#main img {
+  width: 100vw;
 }
