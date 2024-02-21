@@ -19,8 +19,6 @@ a {
 
 #navbar .navbar {
   background-color: rgb(76, 63, 113);
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
 }
 #navbar a {
   color: white !important;
