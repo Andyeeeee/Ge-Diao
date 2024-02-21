@@ -17,6 +17,15 @@ a {
   color: black !important;
 }
 
+#navbar {
+  position: sticky;
+  z-index: 10;
+}
+#navbar img {
+  margin-left: 10px;
+  width: 100px;
+  border-radius: 10px;
+}
 #navbar .navbar {
   background-color: rgb(76, 63, 113);
 }
@@ -47,14 +56,14 @@ a {
   line-height: 50;
 }
 @media (min-width: 576px) {
+  #navbar {
+    position: fixed;
+  }
   #navbar .navbar {
     background-color: unset;
   }
 }
 
-#content {
-  padding-top: 50px;
-}
 @media (min-width: 576px) {
   #content {
     padding-top: 0;
@@ -68,6 +77,11 @@ a {
   text-align: center;
 }
 
-#main img {
-  width: 100vw;
+#main #Carousel .Carousel-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
 }
