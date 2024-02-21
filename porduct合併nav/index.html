@@ -10,18 +10,12 @@
   <style>
     #content {
       /* position: relative; */
-      /* height: 50%; */
+      height: 50%;
     }
 
     .nav-background {
-      background-color: transparent;
+      background-color: rgb(242, 208, 154);
       transition: background-color 0.3s;
-    }
-
-    .blue {
-      background-color: blue;
-      /* transition: background-color 0.3s; */
-
     }
   </style>
 </head>
@@ -43,7 +37,7 @@
   </section> -->
 
 
-  <section id="navbar" class=" fixed-top nav-background">
+  <section id="navbar" class="fixed-top">
 
     <nav class="navbar navbar-expand-sm navbar-light py-0">
       <div class="container-fluid">
@@ -53,7 +47,7 @@
           </li>
         </ul>
 
-        <button class="navbar-toggler navbar-dark " type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
           aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -108,7 +102,7 @@
         })
       })
       $(window).scroll(function () {
-        $('#navbar').toggleClass('blue', $(this).scrollTop() != 0);
+        $('#navbar').toggleClass('nav-background', $(this).scrollTop() != 0);
       });
     });
   </script>
