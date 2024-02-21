@@ -1,4 +1,7 @@
 #content {
   // background-color: blanchedalmond;
-  // padding-top: 50px;
+  padding-top: 50px;
+  @include sm {
+    padding-top: 0;
+  }
 }
