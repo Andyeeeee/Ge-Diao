@@ -15,7 +15,7 @@
 
     .nav-background {
       background-color: transparent;
-      transition: background-color 0.3s;
+      transition: background-color 0.3s, color 0.3s;
 
     }
 
@@ -94,7 +94,11 @@
         })
       })
       $(window).scroll(function () {
-        $('#navbar').toggleClass('blue', $(this).scrollTop() != 0);
+        let isMediumScreen = $(window).width() < 576;
+        if (!isMediumScreen) {
+          $('#navbar').toggleClass('blue', $(this).scrollTop() != 0);
+          $('#navbar a').css('color', $(this).scrollTop() != 0 ? 'white' : 'black');
+        }
       });
     });
   </script>

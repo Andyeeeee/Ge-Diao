@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0;
   background-color: rgb(22, 42, 77);
@@ -14,7 +15,6 @@ li {
 
 a {
   text-decoration: none !important;
-  color: black !important;
 }
 
 #navbar {
@@ -27,10 +27,11 @@ a {
   border-radius: 10px;
 }
 #navbar .navbar {
-  background-color: rgb(76, 63, 113);
+  background-color: cadetblue;
 }
 #navbar a {
-  color: white !important;
+  font-weight: bold;
+  color: white;
 }
 #navbar .nav-background {
   background-color: rgb(242, 208, 154);
@@ -77,11 +78,71 @@ a {
   text-align: center;
 }
 
+#main .h2 {
+  font-weight: bold;
+  font-size: 30px;
+  color: transparent; /* 隱藏文字顏色 */
+  background-image: -webkit-gradient(linear, left top, right top, from(#2744ff), to(rgb(255, 192, 19)));
+  background-image: linear-gradient(to right, #2744ff, rgb(255, 192, 19)); /* 設置漸層背景 */
+  -webkit-background-clip: text;
+          background-clip: text; /* 讓背景只顯示在文字上 */
+}
+#main #Carousel .box {
+  padding-top: 56.25%;
+}
+#main #Carousel img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+#main #Carousel .text-outsid-shadow {
+  text-shadow: -2px -2px 0 #5b5b5b, 2px -2px 0 #5b5b5b, -2px 2px 0 #5b5b5b, 2px 2px 0 #5b5b5b;
+}
 #main #Carousel .Carousel-text {
+  font-size: 45px;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  color: rgb(255, 239, 209);
+}
+#main #Carousel .Carousel-text::before {
+  content: attr(data-storke);
+  position: absolute;
+  z-index: -2;
+  -webkit-text-stroke: 10px #cb9f62;
+}
+#main #Carousel button > span {
+  background-color: rgb(0, 139, 139);
+}
+#main #main-about-GeDiao {
+  background-color: cadetblue;
   color: white;
+}
+#main #main-about-GeDiao .pic .aa {
+  padding-top: 20px;
+}
+#main #main-about-GeDiao .pic img {
+  width: 48%;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+@media (min-width: 768px) {
+  #main #main-about-GeDiao .main-about-GeDiao-text {
+    width: 40%;
+  }
+  #main #main-about-GeDiao .main-about-GeDiao-pic {
+    width: 50%;
+  }
+}
+#main #main-service .service-box {
+  background-image: url("/image/main/service/service1.jpg");
+  background-position: center;
+  background-size: cover;
 }

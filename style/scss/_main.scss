@@ -1,12 +1,87 @@
 #main {
+  //----- #main 全域變數
+
+  .h2 {
+    font-weight: bold;
+    font-size: 30px;
+    color: transparent; /* 隱藏文字顏色 */
+    background-image: linear-gradient(to right, #2744ff, rgb(255, 192, 19)); /* 設置漸層背景 */
+    background-clip: text; /* 讓背景只顯示在文字上 */
+  }
+
+  // ----- #main---Carousel 全域變數
+
   #Carousel {
+    .box {
+      padding-top: 56.25%;
+      // position: relative;
+    }
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      transform: translate(-50%, -50%);
+    }
+    .text-outsid-shadow {
+      text-shadow:
+        -2px -2px 0 #5b5b5b,
+        2px -2px 0 #5b5b5b,
+        -2px 2px 0 #5b5b5b,
+        2px 2px 0 #5b5b5b;
+    }
     .Carousel-text {
+      font-size: 45px;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      color: rgb(255, 239, 209);
+      &::before {
+        content: attr(data-storke);
+        position: absolute;
+        z-index: -2;
+        -webkit-text-stroke: 10px #cb9f62;
+      }
+    }
+    button > span {
+      background-color: rgb(0, 139, 139);
+    }
+  }
 
-      color: white;
+  // ---- #main----main-about-GeDiao 全域變數
+
+  #main-about-GeDiao {
+    // height: 100vh;
+    background-color: cadetblue;
+    color: white;
+    .pic .aa {
+      padding-top: 20px;
+    }
+    .pic img {
+      // padding: 1rem;
+
+      // flex: 1;
+      width: 48%;
+      transition: transform 0.5s ease;
+    }
+    @include md {
+      .main-about-GeDiao-text {
+        width: 40%;
+      }
+      .main-about-GeDiao-pic {
+        width: 50%;
+      }
+    }
+  }
+
+  // ----- #main----main-service
+
+  #main-service {
+    .service-box {
+      background-image: url("/image/main/service/service1.jpg");
+      background-position: center;
+      background-size: cover;
     }
   }
 }
