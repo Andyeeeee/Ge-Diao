@@ -162,3 +162,6 @@ a {
   -webkit-filter: brightness(70%);
           filter: brightness(70%);
 }
+#main #main-service .main-service-text {
+  pointer-events: none; /* 让box2不接受鼠标事件 */
+}
