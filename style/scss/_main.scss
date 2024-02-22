@@ -84,7 +84,7 @@
 
   #main-service {
     .service-box {
-      background-image: url(../image/main/service/service1.jpg);
+      background-image: "../image/main/service/service1.jpg";
 
       background-position: center;
       background-size: cover;
