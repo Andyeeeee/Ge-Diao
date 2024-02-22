@@ -78,14 +78,20 @@ a {
   text-align: center;
 }
 
+#main h2 {
+  padding-bottom: 50px;
+}
 #main .h2 {
   font-weight: bold;
-  font-size: 30px;
+  font-size: 50px;
   color: transparent; /* 隱藏文字顏色 */
   background-image: -webkit-gradient(linear, left top, right top, from(#2744ff), to(rgb(255, 192, 19)));
   background-image: linear-gradient(to right, #2744ff, rgb(255, 192, 19)); /* 設置漸層背景 */
   -webkit-background-clip: text;
           background-clip: text; /* 讓背景只顯示在文字上 */
+}
+#main p {
+  font-size: 20px;
 }
 #main #Carousel .box {
   padding-top: 56.25%;
@@ -142,7 +148,7 @@ a {
   }
 }
 #main #main-service .service-box {
-  background-image: url("../../../image/main/service/service1.jpg");
+  background-image: url("../../../../image/main/service/service1.jpg");
   background-position: center;
   background-size: cover;
 }

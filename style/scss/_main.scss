@@ -1,12 +1,17 @@
 #main {
   //----- #main 全域變數
-
+  h2 {
+    padding-bottom: 50px;
+  }
   .h2 {
     font-weight: bold;
-    font-size: 30px;
+    font-size: 50px;
     color: transparent; /* 隱藏文字顏色 */
     background-image: linear-gradient(to right, #2744ff, rgb(255, 192, 19)); /* 設置漸層背景 */
     background-clip: text; /* 讓背景只顯示在文字上 */
+  }
+  p {
+    font-size: 20px;
   }
 
   // ----- #main---Carousel 全域變數
@@ -79,7 +84,7 @@
 
   #main-service {
     .service-box {
-      background-image: url("../../../image/main/service/service1.jpg");
+      background-image: url("../../../../image/main/service/service1.jpg");
 
       background-position: center;
       background-size: cover;
