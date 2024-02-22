@@ -83,11 +83,17 @@
   // ----- #main----main-service
 
   #main-service {
-    .service-box {
+    .service-background {
+      height: 100%;
+      width: 100%;
       background-image: url("../../image/main/service/service1.jpg");
-
+      transition: filter 0.3s;
       background-position: center;
       background-size: cover;
+
+      &:hover {
+        filter: brightness(70%);
+      }
     }
   }
 }
