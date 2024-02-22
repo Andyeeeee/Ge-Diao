@@ -82,6 +82,17 @@ a {
 #footer li {
   color: white;
 }
+@media (min-width: 576px) {
+  #footer li {
+    padding-bottom: 20px;
+    font-size: 20px;
+  }
+}
+@media (min-width: 992px) {
+  #footer li {
+    font-size: 25px;
+  }
+}
 
 #main h2 {
   padding-bottom: 50px;
@@ -219,7 +230,7 @@ a {
           transform: translate(-50%, -50%);
 }
 #main #main-bestMain p {
-  width: 80%;
+  width: 60%;
   text-align: center;
   position: absolute;
   font-size: 20px;

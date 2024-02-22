@@ -8,4 +8,15 @@
   li {
     color: white;
   }
+  @include sm {
+    li {
+      padding-bottom: 20px;
+      font-size: 20px;
+    }
+  }
+  @include lg {
+    li {
+      font-size: 25px;
+    }
+  }
 }
