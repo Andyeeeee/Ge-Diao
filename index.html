@@ -20,7 +20,7 @@
     }
 
     .blue {
-      background-color: cadetblue;
+      background-color: #018b8b;
     }
   </style>
 </head>
@@ -34,7 +34,7 @@
         <div class="container-fluid">
           <ul class="list-side">
             <!-- navbar-brand -->
-            <li><a href="result/main.html"><img src="image/icon/iconFont.jpg" alt=""></a>
+            <li><a href="result/main.html" onclick="changeTitle('a')"><img src="image/icon/iconFont.jpg" alt=""></a>
             </li>
           </ul>
 
@@ -46,7 +46,7 @@
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav ms-auto  list-side">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="result/aboutus.html">關於我們</a>
+                <a class="nav-link active" aria-current="page" href="result/aboutus.html" data-title="關於我們">關於我們</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="result/Product.html">風格樣式</a>
@@ -94,22 +94,30 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js'></script>
   <script>
+
     $(document).ready(function () {
-      $.get("result/main.html", function (data) {
+
+      $.get("result/aboutus.html", function (data) {
         $("#content").html(data);
       });
-      $(function () {
-        $('.list-side li').click(function () {
-          let link = $(this),
-            alink = link.find('a').attr('href');
-          if ("-1" == alink.search("http://")) {
-            $.get(alink, function (data) {
-              $("#content").html(data);
-            });
-            return false
-          }
-        })
+
+
+      $('.list-side li').click(function () {
+        let link = $(this).find('a'),
+          alink = link.attr('href'),
+          title = link.attr('data-title');
+
+        if ("-1" == alink.search("http://")) {
+          $.get(alink, function (data) {
+            $("#content").html(data);
+            $('html').scrollTop(0);
+            document.title = title; // 设置页面标题为分页标题名称
+          });
+          return false
+        }
       })
+
+
       $(window).scroll(function () {
         let isMediumScreen = $(window).width() < 576;
         if (!isMediumScreen) {

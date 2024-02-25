@@ -13,6 +13,84 @@ li {
 }
 
 a {
-  text-decoration: none !important;
+  text-decoration: none;
   // color: black !important;
+}
+
+//常用樣式
+.h2 {
+  font-weight: bold;
+  font-size: 50px;
+  color: transparent; /* 隱藏文字顏色 */
+  background-image: linear-gradient(to right, #2744ff, rgb(255, 192, 19)); /* 設置漸層背景 */
+  background-clip: text; /* 讓背景只顯示在文字上 */
+}
+
+// -------分頁開頭----------
+.page-title-backgorund-img {
+  padding-top: 56.25%;
+
+  background-position: center;
+  background-size: cover;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-image: linear-gradient(to top, #008b8b, #008b8ba9, #008b8b81);
+  }
+  .page-title-text {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    div:nth-child(1) {
+      color: white;
+    }
+    div:nth-child(2) {
+      color: #7d4015;
+      font-weight: bold;
+      font-size: 40px;
+      font-family: "Times New Roman", Times, serif;
+      &::before {
+        content: "";
+        position: absolute;
+        border-bottom: 2px white solid;
+        width: 30%;
+        height: 100px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+@include sm {
+  // -----sm----分頁開頭-----
+  .page-title-text {
+    div:nth-child(2) {
+      font-size: 60px !important;
+    }
+  }
+}
+
+@include lg {
+  // -----sm----分頁開頭-----
+  .page-title-text {
+    div:nth-child(1) {
+      font-size: 40px;
+    }
+    div:nth-child(2) {
+      font-size: 120px !important;
+      &::before {
+        top: 80% !important;
+      }
+    }
+  }
 }

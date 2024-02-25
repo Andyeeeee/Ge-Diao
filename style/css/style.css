@@ -14,11 +14,83 @@ li {
 }
 
 a {
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
+.h2 {
+  font-weight: bold;
+  font-size: 50px;
+  color: transparent; /* 隱藏文字顏色 */
+  background-image: -webkit-gradient(linear, left top, right top, from(#2744ff), to(rgb(255, 192, 19)));
+  background-image: linear-gradient(to right, #2744ff, rgb(255, 192, 19)); /* 設置漸層背景 */
+  -webkit-background-clip: text;
+          background-clip: text; /* 讓背景只顯示在文字上 */
+}
+
+.page-title-backgorund-img {
+  padding-top: 56.25%;
+  background-position: center;
+  background-size: cover;
+}
+.page-title-backgorund-img::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#008b8b), color-stop(rgba(0, 139, 139, 0.662745098)), to(rgba(0, 139, 139, 0.5058823529)));
+  background-image: linear-gradient(to top, #008b8b, rgba(0, 139, 139, 0.662745098), rgba(0, 139, 139, 0.5058823529));
+}
+.page-title-backgorund-img .page-title-text {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.page-title-backgorund-img .page-title-text div:nth-child(1) {
+  color: white;
+}
+.page-title-backgorund-img .page-title-text div:nth-child(2) {
+  color: #7d4015;
+  font-weight: bold;
+  font-size: 40px;
+  font-family: "Times New Roman", Times, serif;
+}
+.page-title-backgorund-img .page-title-text div:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  border-bottom: 2px white solid;
+  width: 30%;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media (min-width: 576px) {
+  .page-title-text div:nth-child(2) {
+    font-size: 60px !important;
+  }
+}
+@media (min-width: 992px) {
+  .page-title-text div:nth-child(1) {
+    font-size: 40px;
+  }
+  .page-title-text div:nth-child(2) {
+    font-size: 120px !important;
+  }
+  .page-title-text div:nth-child(2)::before {
+    top: 80% !important;
+  }
+}
 #navbar {
-  position: sticky;
+  position: fixed;
   z-index: 10;
 }
 #navbar img {
@@ -27,7 +99,7 @@ a {
   border-radius: 10px;
 }
 #navbar .navbar {
-  background-color: cadetblue;
+  background-color: #018b8b;
 }
 #navbar a {
   font-weight: bold;
@@ -60,11 +132,17 @@ a {
   #navbar {
     position: fixed;
   }
+  #navbar a {
+    color: black;
+  }
   #navbar .navbar {
     background-color: unset;
   }
 }
 
+#content {
+  padding-top: 55px;
+}
 @media (min-width: 576px) {
   #content {
     padding-top: 0;
@@ -77,7 +155,7 @@ a {
 }
 #footer h1 {
   font-size: 50px;
-  color: rgb(125, 64, 21);
+  color: #7d4015;
 }
 #footer li {
   color: white;
@@ -139,10 +217,10 @@ a {
   -webkit-text-stroke: 10px #cb9f62;
 }
 #main #Carousel button > span {
-  background-color: rgb(0, 139, 139);
+  background-color: #008b8b;
 }
 #main #main-about-GeDiao {
-  background-color: cadetblue;
+  background-color: #018b8b;
   color: white;
 }
 #main #main-about-GeDiao .pic .aa {
@@ -241,4 +319,50 @@ a {
 }
 #main #main-bestMain button > span {
   background-color: rgb(0, 139, 139);
+}
+
+#aboutus {
+  background-color: #e8dbca;
+}
+#aboutus section {
+  background-color: #e8dbca;
+}
+#aboutus section .section-title {
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 60px;
+  color: transparent; /* 隱藏文字顏色 */
+  background-image: -webkit-gradient(linear, left top, right top, from(#2744ff), to(rgb(255, 192, 19)));
+  background-image: linear-gradient(to right, #2744ff, rgb(255, 192, 19)); /* 設置漸層背景 */
+  -webkit-background-clip: text;
+          background-clip: text; /* 讓背景只顯示在文字上 */
+  font-family: cursive;
+}
+#aboutus section .aboutus-text-eara {
+  padding: 2rem;
+}
+#aboutus .title-pic .page-title-backgorund-img {
+  background-image: url("../../image/aboutus/title-pic.jpg");
+}
+@media (min-width: 768px) {
+  #aboutus .aboutus-one .aboutus-text-eara {
+    color: white;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#008b8b), color-stop(#7bcaca), to(#e8dbca));
+    background-image: linear-gradient(to bottom, #008b8b, #7bcaca, #e8dbca);
+  }
+  #aboutus .aboutus-two {
+    margin: 10rem 0;
+  }
+  #aboutus .aboutus-two .aboutus-one-pic {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  #aboutus .aboutus-three {
+    padding: 5rem 0;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#e8dbca), to(#ffffff));
+    background-image: linear-gradient(to bottom, #e8dbca, #ffffff);
+  }
 }

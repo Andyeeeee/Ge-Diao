@@ -1,0 +1,49 @@
+#aboutus {
+  //aboutus全域變數
+  background-color: #e8dbca;
+
+  section {
+    background-color: #e8dbca;
+    .section-title {
+      padding: 0;
+      margin: 0;
+      font-weight: bold;
+      font-size: 50px;
+      line-height: 60px;
+      color: transparent; /* 隱藏文字顏色 */
+      background-image: linear-gradient(to right, #2744ff, rgb(255, 192, 19)); /* 設置漸層背景 */
+      background-clip: text; /* 讓背景只顯示在文字上 */
+      font-family: cursive;
+    }
+    .aboutus-text-eara {
+      padding: 2rem;
+    }
+  }
+
+  // ---------aboutus-title-------
+  .title-pic {
+    // padding-top: 56.25%;
+    .page-title-backgorund-img {
+      background-image: url("../../image/aboutus/title-pic.jpg");
+    }
+  }
+
+  @include md {
+    .aboutus-one {
+      .aboutus-text-eara {
+        color: white;
+        background-image: linear-gradient(to bottom, #008b8b, #7bcaca, #e8dbca);
+      }
+    }
+    .aboutus-two {
+      margin: 10rem 0;
+      .aboutus-one-pic {
+        order: 1;
+      }
+    }
+    .aboutus-three {
+      padding: 5rem 0;
+      background-image: linear-gradient(to bottom, #e8dbca, #ffffff);
+    }
+  }
+}

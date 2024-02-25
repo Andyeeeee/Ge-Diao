@@ -1,5 +1,5 @@
 #navbar {
-  position: sticky;
+  position: fixed;
   z-index: 10;
   img {
     margin-left: 10px;
@@ -7,7 +7,7 @@
     border-radius: 10px;
   }
   .navbar {
-    background-color: cadetblue;
+    background-color: #018b8b;
     // transition: background-color 0.3s;
   }
   a {
@@ -51,6 +51,9 @@
   }
   @include sm {
     position: fixed;
+    a {
+      color: black;
+    }
     .navbar {
       background-color: unset;
     }
