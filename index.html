@@ -34,11 +34,11 @@
         <div class="container-fluid">
           <ul class="list-side">
             <!-- navbar-brand -->
-            <li><a href="result/main.html" onclick="changeTitle('a')"><img src="image/icon/iconFont.jpg" alt=""></a>
+            <li><a href="result/main.html" data-title="閣調"><img src="image/icon/iconFont.jpg" alt=""></a>
             </li>
           </ul>
 
-          <button class="navbar-toggler navbar-dark " type="button" data-bs-toggle="collapse"
+          <button class="navbar-toggler navbar-dark collapsed " type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false"
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -49,13 +49,13 @@
                 <a class="nav-link active" aria-current="page" href="result/aboutus.html" data-title="關於我們">關於我們</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="result/Product.html">風格樣式</a>
+                <a class="nav-link" href="result/Product.html" data-title="風格樣式">風格樣式</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="result/Designer.html">設計師</a>
+                <a class="nav-link" href="result/Designer.html" data-title="設計師">設計師</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="result/CallUs.html">關於我們</a>
+                <a class="nav-link" href="result/CallUs.html" data-title="關於我們">關於我們</a>
               </li>
             </ul>
             <!-- <span class="navbar-text">
@@ -77,14 +77,14 @@
 
       <div class="left">
         <ul>
-          <li>關於我們</li>
-          <li>風格樣式</li>
+          <li> <a href="result/aboutus.html" data-title="關於我們">關於我們</a></li>
+          <li> <a href="result/Product.html" data-title="風格樣式">風格樣式</a></li>
         </ul>
       </div>
       <div class="right py-4">
         <ul>
-          <li>設計師</li>
-          <li>關於我們</li>
+          <li> <a href="result/Designer.html" data-title="設計師">設計師</a></li>
+          <li> <a href="result/CallUs.html" data-title="關於我們">關於我們</a></li>
         </ul>
       </div>
     </div>
@@ -93,6 +93,7 @@
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js'></script>
+  <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.js'></script> -->
   <script>
 
     $(document).ready(function () {
@@ -111,7 +112,13 @@
           $.get(alink, function (data) {
             $("#content").html(data);
             $('html').scrollTop(0);
+            // $('.navbar-collapse').collapse('hide'); // 收回 Navbar
             document.title = title; // 设置页面标题为分页标题名称
+            if ($(window).width() < 576) {
+              $('.collapse').collapse('dispose'); // 銷毀所有的 Collapse 實例
+              $('.navbar-collapse').collapse(); // 重新初始化 Collapse
+
+            }
           });
           return false
         }

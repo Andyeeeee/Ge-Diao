@@ -29,6 +29,7 @@ a {
 
 .page-title-backgorund-img {
   padding-top: 56.25%;
+  background-image: url("../../image/aboutus/title-pic.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -343,9 +344,6 @@ a {
 #aboutus section .aboutus-text-eara {
   padding: 2rem;
 }
-#aboutus .title-pic .page-title-backgorund-img {
-  background-image: url("../../image/aboutus/title-pic.jpg");
-}
 @media (min-width: 768px) {
   #aboutus .aboutus-one .aboutus-text-eara {
     color: white;
@@ -365,4 +363,59 @@ a {
     background-image: -webkit-gradient(linear, left top, left bottom, from(#e8dbca), to(#ffffff));
     background-image: linear-gradient(to bottom, #e8dbca, #ffffff);
   }
+}
+
+#product .card {
+  background-color: beige;
+  /* border: 1px solid #ccc; */
+  padding: auto;
+  text-align: center;
+  border-top: 1.5px rgb(1, 137, 60) solid;
+  border-bottom: 1.5px rgb(1, 137, 60) solid;
+  border-left: 1.5px rgb(1, 137, 60) solid;
+  border-right: 1.5px rgb(1, 137, 60) solid;
+  border-radius: 0;
+}
+#product .card::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 139, 139, 0)), color-stop(rgba(0, 139, 139, 0)), to(rgba(0, 0, 0, 0.7098039216)));
+  background-image: linear-gradient(to bottom, rgba(0, 139, 139, 0), rgba(0, 139, 139, 0), rgba(0, 0, 0, 0.7098039216));
+  z-index: 1;
+  pointer-events: none;
+}
+#product .box {
+  background-color: burlywood;
+  height: auto;
+  border: 2px black solid;
+}
+#product .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  font-size: 30px;
+  pointer-events: none;
+  /* background-color: antiquewhite; */
+  width: 90%;
+  height: 100%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  z-index: 1;
+}
+#product img:hover {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }

@@ -4,11 +4,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>產品風格</title>
 </head>
 
 <body>
-  <div class="asd">121212</div>
+  <div id="product">
+
+    <section class="title-pic">
+      <div class="  position-relative">
+        <div class="page-title-backgorund-img  ">
+          <div class="page-title-text">
+            <div>產品風格</div>
+            <div>Ge Diao Style</div>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+
+
+    <section class="product-card">
+      <div id="cards-container" class="d-flex flex-wrap"></div>
+    </section>
+
+
+
+  </div>
+
+
+  <script>
+    // Sample data for the cards
+    var data = [
+      { imgSrc: 'image/Product/Product1.jpg', name: '樣式 1' },
+      { imgSrc: 'image/Product/Product1.jpg', name: '樣式 2' },
+      { imgSrc: 'image/Product/Product1.jpg', name: '樣式 3' },
+      { imgSrc: 'image/Product/Product1.jpg', name: '樣式 4' },
+      { imgSrc: 'image/Product/Product1.jpg', name: '樣式 5' },
+      { imgSrc: 'image/Product/Product1.jpg', name: '樣式 6' },
+      { imgSrc: 'image/Product/Product1.jpg', name: '樣式 7' },
+      { imgSrc: 'image/Product/Product1.jpg', name: '樣式 8' },
+      { imgSrc: 'image/Product/Product1.jpg', name: '樣式 9' },
+      { imgSrc: 'image/Product/Product1.jpg', name: '樣式 10' },
+      { imgSrc: 'image/Product/Product1.jpg', name: '樣式 11' },
+      { imgSrc: 'image/Product/Product1.jpg', name: '樣式 12' },
+      { imgSrc: 'image/Product/Product1.jpg', name: '樣式 13' },
+      { imgSrc: 'image/Product/Product1.jpg', name: '樣式 14' },
+      { imgSrc: 'image/Product/Product1.jpg', name: '樣式 15' },
+      { imgSrc: 'image/Product/Product1.jpg', name: '樣式 16' },
+      { imgSrc: 'image/Product/Product1.jpg', name: '樣式 17' },
+      { imgSrc: 'image/Product/Product1.jpg', name: '樣式 18' },
+      { imgSrc: 'image/Product/Product1.jpg', name: '樣式 19' },
+      { imgSrc: 'image/Product/Product1.jpg', name: '樣式 20' },
+      { imgSrc: 'image/Product/Product1.jpg', name: '樣式 21' },
+      { imgSrc: 'image/Product/Product1.jpg', name: '樣式 22' },
+      { imgSrc: 'image/Product/Product1.jpg', name: '樣式 23' },
+      { imgSrc: 'image/Product/Product1.jpg', name: '樣式 24' }
+
+    ];
+
+    // Generate card elements and append them to the container
+    $(document).ready(function () {
+      let container = $('#cards-container');
+      // let cardHtml = '';
+      container.append(data.map(function (item) {
+        return `<div class="card col-12 col-md-6 col-lg-4 ">
+      <img src="${item.imgSrc}" alt="">
+      <div class="text">
+        <div>
+          <div class="name">${item.name}</div>
+        </div>
+      </div>
+    </div>`;
+        ;
+      }));
+    });
+    // Create a row and append all the card elements to it
+
+  </script>
+
 </body>
 
 </html>
