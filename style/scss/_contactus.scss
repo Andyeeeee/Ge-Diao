@@ -1,0 +1,51 @@
+#contactus {
+  background-color: #018b8b;
+
+  .information,
+  .from {
+    width: 80%;
+    h1 {
+      font-family: "Courier New", Courier, monospace;
+      font-weight: bold;
+    }
+    p {
+      text-align: start;
+    }
+    input,
+    textarea,
+    .button {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    //   .button {
+    //     margin: auto;
+    //   }
+    // }
+    // @include sm {
+    // }
+  }
+  @include sm {
+    .information,
+    .from {
+      width: 60%;
+    }
+  }
+  @include md {
+    .information,
+    .from {
+      width: 50%;
+    }
+  }
+  @include lg {
+    .information,
+    .from {
+      width: 40%;
+    }
+  }
+  @include xl {
+    .information,
+    .from {
+      width: 30%;
+    }
+  }
+}

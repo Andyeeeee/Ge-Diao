@@ -374,10 +374,11 @@ a {
   /* border: 1px solid #ccc; */
   padding: auto;
   text-align: center;
-  border-top: 1.5px rgb(1, 137, 60) solid;
-  border-bottom: 1.5px rgb(1, 137, 60) solid;
-  border-left: 1.5px rgb(1, 137, 60) solid;
-  border-right: 1.5px rgb(1, 137, 60) solid;
+  border-top: 1.5px solid;
+  border-bottom: 1.5px solid;
+  border-left: 1.5px solid;
+  border-right: 1.5px solid;
+  border-color: burlywood;
   border-radius: 0;
 }
 #product .card::before {
@@ -404,8 +405,8 @@ a {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  top: 50%;
-  left: 52%;
+  top: 45%;
+  left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   color: white;
@@ -422,4 +423,54 @@ a {
 #product img:hover {
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
+}
+
+#contactus {
+  background-color: #018b8b;
+}
+#contactus .information,
+#contactus .from {
+  width: 80%;
+}
+#contactus .information h1,
+#contactus .from h1 {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+}
+#contactus .information p,
+#contactus .from p {
+  text-align: start;
+}
+#contactus .information input,
+#contactus .information textarea,
+#contactus .information .button,
+#contactus .from input,
+#contactus .from textarea,
+#contactus .from .button {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+@media (min-width: 576px) {
+  #contactus .information,
+  #contactus .from {
+    width: 60%;
+  }
+}
+@media (min-width: 768px) {
+  #contactus .information,
+  #contactus .from {
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  #contactus .information,
+  #contactus .from {
+    width: 40%;
+  }
+}
+@media (min-width: 1200px) {
+  #contactus .information,
+  #contactus .from {
+    width: 30%;
+  }
 }
