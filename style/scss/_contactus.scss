@@ -1,6 +1,11 @@
 #contactus {
   background-color: #018b8b;
-
+  .information {
+    padding: 10rem 0px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    color: #613900;
+    font-size: 15px;
+  }
   .information,
   .from {
     width: 80%;
@@ -28,6 +33,9 @@
     .information,
     .from {
       width: 60%;
+    }
+    .information {
+      font-size: 18px;
     }
   }
   @include md {

@@ -428,6 +428,12 @@ a {
 #contactus {
   background-color: #018b8b;
 }
+#contactus .information {
+  padding: 10rem 0px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #613900;
+  font-size: 15px;
+}
 #contactus .information,
 #contactus .from {
   width: 80%;
@@ -454,6 +460,9 @@ a {
   #contactus .information,
   #contactus .from {
     width: 60%;
+  }
+  #contactus .information {
+    font-size: 18px;
   }
 }
 @media (min-width: 768px) {
