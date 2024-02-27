@@ -87,16 +87,15 @@
     const images = [
       { button: 'button1', src: 'https://i.ytimg.com/vi/9FwtGDVcSwQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBu2FNwWdnc95ulzKZ13-7g973upQ', alt: '得獎' },
       { button: 'button2', src: 'https://i.ytimg.com/vi/ldojZMRcPvE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBBc6odnYZdVObMuWJUc5uVag6rcg', alt: '得獎' },
-      { button: 'button1', src: 'https://i.ytimg.com/vi/9FwtGDVcSwQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBu2FNwWdnc95ulzKZ13-7g973upQ', alt: '得獎' },
-      { button: 'button1', src: 'https://i.ytimg.com/vi/9FwtGDVcSwQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBu2FNwWdnc95ulzKZ13-7g973upQ', alt: '得獎' }
+      { button: 'button3', src: 'https://i.ytimg.com/vi/9FwtGDVcSwQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBu2FNwWdnc95ulzKZ13-7g973upQ', alt: '得獎' },
+      { button: 'button4', src: 'https://i.ytimg.com/vi/9FwtGDVcSwQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBu2FNwWdnc95ulzKZ13-7g973upQ', alt: '得獎' }
     ];
 
-
     const videos = [
-      { container: 'container1', src: 'https://www.youtube.com/embed/9FwtGDVcSwQ?si=RmNaPZM6VTfg59MN', title: 'YouTube video player', closeButton: 'closeButton1' },
-      { container: 'container2', src: 'https://www.youtube.com/embed/9FwtGDVcSwQ?si=RmNaPZM6VTfg59MN', title: 'YouTube video player', closeButton: 'closeButton2' },
-      { container: 'container3', src: 'https://www.youtube.com/embed/9FwtGDVcSwQ?si=RmNaPZM6VTfg59MN', title: 'YouTube video player', closeButton: 'closeButton3' },
-      { container: 'container4', src: 'https://www.youtube.com/embed/9FwtGDVcSwQ?si=RmNaPZM6VTfg59MN', title: 'YouTube video player', closeButton: 'closeButton4' },
+      { container: 'video-container1', src: 'https://www.youtube.com/embed/9FwtGDVcSwQ?si=RmNaPZM6VTfg59MN', title: 'YouTube video player', closeButton: 'closeButton1' },
+      { container: 'video-container2', src: 'https://www.youtube.com/embed/9FwtGDVcSwQ?si=RmNaPZM6VTfg59MN', title: 'YouTube video player', closeButton: 'closeButton2' },
+      { container: 'video-container3', src: 'https://www.youtube.com/embed/9FwtGDVcSwQ?si=RmNaPZM6VTfg59MN', title: 'YouTube video player', closeButton: 'closeButton3' },
+      { container: 'video-container4', src: 'https://www.youtube.com/embed/9FwtGDVcSwQ?si=RmNaPZM6VTfg59MN', title: 'YouTube video player', closeButton: 'closeButton4' },
     ];
 
     const videoElements = videos.map(video =>
@@ -127,7 +126,7 @@
 
     var playButton1 = document.getElementById('button1');
     var videoContainer1 = document.getElementById('video-container1');
-    var closeButton1 = document.getElementById('closebutton1');
+    var closeButton1 = document.getElementById('closeButton1');
 
     playButton1.addEventListener('click', function () {
       videoContainer1.style.display = 'flex';
@@ -140,7 +139,7 @@
 
     var playButton2 = document.getElementById('button2');
     var videoContainer2 = document.getElementById('video-container2');
-    var closeButton2 = document.getElementById('closebutton2');
+    var closeButton2 = document.getElementById('closeButton2');
 
     playButton2.addEventListener('click', function () {
       videoContainer2.style.display = 'flex';
@@ -152,7 +151,7 @@
 
     var playButton3 = document.getElementById('button3');
     var videoContainer3 = document.getElementById('video-container3');
-    var closeButton3 = document.getElementById('closebutton3');
+    var closeButton3 = document.getElementById('closeButton3');
 
     playButton3.addEventListener('click', function () {
       videoContainer3.style.display = 'flex';
@@ -164,7 +163,7 @@
 
     var playButton4 = document.getElementById('button4');
     var videoContainer4 = document.getElementById('video-container4');
-    var closeButton4 = document.getElementById('closebutton4');
+    var closeButton4 = document.getElementById('closeButton4');
 
     playButton4.addEventListener('click', function () {
       videoContainer4.style.display = 'flex';
