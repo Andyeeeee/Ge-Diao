@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .row {
+      --bs-gutter-x: 0rem;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .video-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100vw;
+      min-height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5);
+      /* 半透明黑色背景 */
+      z-index: 9999;
+      /* 設定最上層 */
+      display: none;
+      /* 預設隱藏 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      display: none;
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-top: 56.25%;
+      /* 16:9 Aspect Ratio (h/w) */
+      width: 100%;
+
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .close-button {
+      position: absolute;
+      top: 10px;
+      right: 30px;
+      cursor: pointer;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="media">
+    <section class="title-pic">
+      <div class="  position-relative">
+        <div class="page-title-backgorund-img  ">
+          <div class="page-title-text">
+            <div>媒體資訊</div>
+            <div>Media</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="media-video">
+      <div class="row">
+
+      </div>
+
+    </section>
+
+    <section class="media-video-play">
+
+    </section>
+  </div>
+  <script>
+    // 假設您有一個包含圖片資料的陣列
+    const images = [
+      { button: 'button1', src: 'https://i.ytimg.com/vi/9FwtGDVcSwQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBu2FNwWdnc95ulzKZ13-7g973upQ', alt: '得獎' },
+      { button: 'button2', src: 'https://i.ytimg.com/vi/ldojZMRcPvE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBBc6odnYZdVObMuWJUc5uVag6rcg', alt: '得獎' },
+      { button: 'button1', src: 'https://i.ytimg.com/vi/9FwtGDVcSwQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBu2FNwWdnc95ulzKZ13-7g973upQ', alt: '得獎' },
+      { button: 'button1', src: 'https://i.ytimg.com/vi/9FwtGDVcSwQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBu2FNwWdnc95ulzKZ13-7g973upQ', alt: '得獎' }
+    ];
+
+
+    const videos = [
+      { container: 'container1', src: 'https://www.youtube.com/embed/9FwtGDVcSwQ?si=RmNaPZM6VTfg59MN', title: 'YouTube video player', closeButton: 'closeButton1' },
+      { container: 'container2', src: 'https://www.youtube.com/embed/9FwtGDVcSwQ?si=RmNaPZM6VTfg59MN', title: 'YouTube video player', closeButton: 'closeButton2' },
+      { container: 'container3', src: 'https://www.youtube.com/embed/9FwtGDVcSwQ?si=RmNaPZM6VTfg59MN', title: 'YouTube video player', closeButton: 'closeButton3' },
+      { container: 'container4', src: 'https://www.youtube.com/embed/9FwtGDVcSwQ?si=RmNaPZM6VTfg59MN', title: 'YouTube video player', closeButton: 'closeButton4' },
+    ];
+
+    const videoElements = videos.map(video =>
+      `
+    <div id="${video.container}" class="video-container">
+
+<div class="video-wrapper">
+  <iframe width="560" height="315" src="${video.src}"
+    title="${video.title}" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div>
+<span id="${video.closeButton}" class="close-button">Close</span>
+</div>
+    `
+    )
+
+    // 將每個圖片資料轉換為對應的 HTML 字串
+    const imageElements = images.map(image => `
+  <div id="${image.button}" class="col-12 col-md-6">
+    <img src="${image.src}" alt="${image.alt}">
+  </div>
+`).join('');
+
+    // 在您的 HTML 中使用這些元素
+    document.querySelector('.row').innerHTML = imageElements;
+    document.querySelector('.media-video-play').innerHTML = videoElements;
+
+    var playButton1 = document.getElementById('button1');
+    var videoContainer1 = document.getElementById('video-container1');
+    var closeButton1 = document.getElementById('closebutton1');
+
+    playButton1.addEventListener('click', function () {
+      videoContainer1.style.display = 'flex';
+    });
+
+    closeButton1.addEventListener('click', function () {
+      videoContainer1.style.display = 'none';
+    });
+
+
+    var playButton2 = document.getElementById('button2');
+    var videoContainer2 = document.getElementById('video-container2');
+    var closeButton2 = document.getElementById('closebutton2');
+
+    playButton2.addEventListener('click', function () {
+      videoContainer2.style.display = 'flex';
+    });
+
+    closeButton2.addEventListener('click', function () {
+      videoContainer2.style.display = 'none';
+    });
+
+    var playButton3 = document.getElementById('button3');
+    var videoContainer3 = document.getElementById('video-container3');
+    var closeButton3 = document.getElementById('closebutton3');
+
+    playButton3.addEventListener('click', function () {
+      videoContainer3.style.display = 'flex';
+    });
+
+    closeButton3.addEventListener('click', function () {
+      videoContainer3.style.display = 'none';
+    });
+
+    var playButton4 = document.getElementById('button4');
+    var videoContainer4 = document.getElementById('video-container4');
+    var closeButton4 = document.getElementById('closebutton4');
+
+    playButton4.addEventListener('click', function () {
+      videoContainer4.style.display = 'flex';
+    });
+
+    closeButton4.addEventListener('click', function () {
+      videoContainer4.style.display = 'none';
+    });
+  </script>
+</body>
+
+</html>
