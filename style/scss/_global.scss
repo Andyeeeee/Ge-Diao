@@ -17,6 +17,31 @@ a {
   // color: black !important;
 }
 
+.top-button {
+  background-color: #008b8b00;
+  border: 5px solid black;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  z-index: 999;
+  a {
+    width: 70px;
+    height: 70px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: yellow;
+    border: 5px solid black;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #008b8b;
+    &:hover {
+      background-color: rgb(222, 222, 0);
+      font-style: italic;
+    }
+  }
+}
+
 //常用樣式
 .h2 {
   font-weight: bold;
