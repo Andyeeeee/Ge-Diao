@@ -18,7 +18,8 @@
 
   #Carousel {
     .box {
-      padding-top: 56.25%;
+      min-height: 100vh;
+      // padding-top: 56.25%;
       // position: relative;
     }
     img {
@@ -27,6 +28,8 @@
       left: 50%;
       width: 100%;
       transform: translate(-50%, -50%);
+      min-height: 100vh;
+      object-fit: cover;
     }
     .text-outsid-shadow {
       text-shadow:
