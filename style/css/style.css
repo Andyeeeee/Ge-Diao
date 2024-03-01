@@ -481,16 +481,16 @@ a {
 }
 #media .video-wrapper {
   position: relative;
-  padding-top: 56.25%;
   /* 16:9 Aspect Ratio (h/w) */
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 #media iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  min-height: 80vh;
+  margin: auto;
+  min-width: 80vw;
 }
 #media .close-button {
   position: absolute;
@@ -499,19 +499,6 @@ a {
   cursor: pointer;
   color: white;
 }
-@media (min-width: 992px) {
-  #media iframe {
-    margin: auto;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    height: 80%;
-    width: 80%;
-  }
-}
-
 #contactus {
   background-color: #018b8b;
 }
